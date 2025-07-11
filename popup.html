@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Data Reader</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Form Data Reader</h1>
+        <p>Read and validate form data from web pages</p>
+      </header>
+
+      <div class="actions">
+        <button id="readFormData" class="btn btn-primary">
+          <span class="icon">📋</span>
+          Read Form Data
+        </button>
+        <button id="viewStoredData" class="btn btn-secondary">
+          <span class="icon">💾</span>
+          View Stored Data
+        </button>
+        <button id="openStoredDataPage" class="btn btn-secondary">
+          <span class="icon">🔗</span>
+          Open Stored Data Page
+        </button>
+      </div>
+
+      <div id="status" class="status hidden"></div>
+
+      <div id="dataDisplay" class="data-display hidden">
+        <h3>Captured Form Data</h3>
+        <div id="formDataList"></div>
+      </div>
+
+      <div
+        id="showAllToggleContainer"
+        style="margin: 16px 0; text-align: center"
+      >
+        <button id="showAllToggle" class="btn btn-secondary">
+          Show All Synced Data
+        </button>
+      </div>
+
+      <div id="storedDataModal" class="modal hidden">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Stored Data</h3>
+            <button id="closeModal" class="close-btn">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="storedDataList"></div>
+          </div>
+          <div class="modal-footer">
+            <button id="clearAllData" class="btn btn-danger">
+              Clear All Data
+            </button>
+            <button id="syncToAPI" class="btn btn-success">Sync to API</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
